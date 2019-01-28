@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vigenère cipher</title>
+    <script src="scripts/vigenere.js"></script>
+</head>
+<body>
+<h1>Vigenère cipher encoder/decoder</h1>
+<table>
+    <tr>
+        <td>Mode</td>
+        <td>
+            <input type="radio" name="mode" value="encode" id="radio-encode" checked><label
+                for="radio-encode">Encode</label>
+            <input type="radio" name="mode" value="decode" id="radio-decode"><label
+                for="radio-decode">Decode</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="text-input">Input</label></td>
+        <td><textarea id="text-input" rows="24" cols="80"></textarea></td>
+    </tr>
+    <tr>
+        <td><label for="key-input">Key (letters only)</label></td>
+        <td><input type="text" id="key-input" placeholder="mykey"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button id="go-button" onclick="handleButton();">Go</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
