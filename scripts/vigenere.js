@@ -51,7 +51,7 @@ function shiftBy(char, shiftChar, reverse = false) {
         shiftValue *= -1;  // undo a previous operation
 
     // perform the shift
-    charValue = (charValue + shiftValue) % 26;
+    charValue = properMod(charValue + shiftValue, 26);
 
     // convert back
     char = String.fromCharCode(charValue + baseChar);
@@ -89,4 +89,11 @@ function handleButton() {
         textBox.value = encrypt(textBox.value, key);
     else
         textBox.value = decrypt(textBox.value, key);
+}
+
+function properMod(a, b) {
+    let result = a % b;
+    if (result < 0)
+        result += b;
+    return result
 }
